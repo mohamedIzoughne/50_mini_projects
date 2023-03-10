@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: red; */
+    align-items: center;
+    margin-top: 40vh;
+    padding: 20px;
+}
+
+.steps {
+    display: flex;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    --main-color: #eee;
+    color: black;
+}
+
+.step.active {
+    --main-color: rgb(0, 123, 255);
+}
+
+.step span:last-child {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 0;
+    border: var(--main-color) 2px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition-duration: .3s;
+}
+
+.steps span:first-child:not(.start) {
+    width: 40px;
+    height: 1px;
+    display: block;
+    background-color: #eee;
+    border-radius: 9999999px;
+    -webkit-border-radius: 9999999px;
+    -moz-border-radius: 9999999px;
+    -ms-border-radius: 9999999px;
+    -o-border-radius: 9999999px;
+    transition-duration: .3s;
+    position: relative;
+}
+
+.steps span:first-child:not(.start)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition-duration: .3s;
+    transform-origin: left;
+}
+
+.step.active span:first-child:not(.start)::after {
+    width: 100%;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons>button.un-active {
+    background-color: #eee;
+    color: black;
+}
+
+.buttons>button {
+    border: none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    outline: none;
+    width: 100px;
+    padding-block: 5px;
+    background-color: #18b8f7;
+    color: white;
+    transition-duration: .1s;
+    cursor: pointer;
+}

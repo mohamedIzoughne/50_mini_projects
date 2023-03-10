@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8e6bb2;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 600px;
+  max-width: calc(100% - 20px);
+}
+
+.container > div {
+  background-color: #301955;
+  color: white;
+}
+
+.container .search {
+  margin-bottom: 25px;
+  border-radius: 99999px;
+  -webkit-border-radius: 99999px;
+  -moz-border-radius: 99999px;
+  -ms-border-radius: 99999px;
+  -o-border-radius: 99999px;
+  overflow: hidden;
+}
+
+.container .search .search-inp {
+  width: 100%;
+  background-color: #301955;
+  border: none;
+  outline: none;
+  padding: 15px;
+  padding-left: 25px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.search-inp::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.search-inp:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.search-inp::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.user {
+  --main-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.user img {
+  width: 130px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.user .profile-img {
+  text-align: center;
+}
+
+.user .info {
+  margin-left: var(--main-gap);
+  flex: 1;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.user .username {
+  font-size: 1.3rem;
+  margin-bottom: var(--main-gap);
+}
+
+.user .description {
+  font-size: 0.8rem;
+  color: #ddd;
+  margin-bottom: var(--main-gap);
+}
+
+.user .data {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  font-weight: bold;
+  margin-bottom: var(--main-gap);
+}
+
+.data > * {
+  padding: 10px;
+}
+
+.user a {
+  display: inline-block;
+  background-color: #150a27;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.not-found {
+  flex: 1;
+  height: 150px;
+  color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 490px) {
+  .profile-img {
+    flex: 1;
+    text-align: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+}

@@ -1,0 +1,134 @@
+:root {
+    --main-color: rgb(75, 180, 255);
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 375px;
+    background-color: #666eeb;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+
+.form-container>h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-container input {
+    outline: none;
+    border: none;
+    caret-color: white;
+}
+
+#email-input,
+#password-input {
+    padding: 8px;
+    background-color: transparent;
+    border-bottom: 2px white solid;
+    margin-bottom: 15px;
+    color: white;
+    z-index: 4;
+}
+
+#submit-btn {
+    background-color: var(--main-color);
+    padding: 10px;
+    font-weight: bold;
+    color: #4d57f5;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.form-container label {
+    letter-spacing: -2px;
+}
+
+.password-label span,
+.email-label span {
+    display: inline-block;
+    transform: translateY(25px);
+    -webkit-transform: translateY(25px);
+    -moz-transform: translateY(25px);
+    -ms-transform: translateY(25px);
+    -o-transform: translateY(25px);
+    transition-duration: .2s;
+}
+
+.password-label.active span,
+.email-label.active span {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+
+.password-label span:nth-child(2),
+.email-label span:nth-child(2) {
+    transition-delay: .05s;
+}
+
+.password-label span:nth-child(3),
+.email-label span:nth-child(3) {
+    transition-delay: .10s;
+}
+
+.password-label span:nth-child(4),
+.email-label span:nth-child(4) {
+    transition-delay: .15s;
+}
+
+.password-label span:nth-child(5),
+.email-label span:nth-child(5) {
+    transition-delay: .20s;
+}
+
+.password-label span:nth-child(6) {
+    transition-delay: .25s;
+}
+
+.password-label span:nth-child(7) {
+    transition-delay: .30s;
+
+}
+
+.password-label span:nth-child(8) {
+    transition-delay: .35s;
+}
+
+.comment span {
+    cursor: pointer;
+}
+
+.comment span a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.comment span:hover {
+    text-decoration: underline;
+}

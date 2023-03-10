@@ -1,0 +1,99 @@
+/* boiler plate */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------- */
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.container>div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    text-align: center;
+    flex: 1;
+}
+
+.container>div::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.682);
+    top: 0;
+    left: 0;
+}
+
+.container .sec-1::after {
+    background-color: rgba(38, 19, 75, 0.63);
+}
+
+.container .sec-2::after {
+    background-color: rgba(0, 0, 0, 0.715);
+}
+
+.container .sec-1 {
+    background-image: url(cat-05.jpg);
+}
+
+.container .sec-2 {
+    background-image: url(cat-06.jpg);
+}
+
+.container h1 {
+    color: white;
+    z-index: 2;
+}
+
+a {
+    display: block;
+    width: 120px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1.5px solid white;
+    z-index: 2;
+    transition-duration: .3s;
+}
+
+.container>div.active {
+    flex-basis: 40%;
+}
+
+
+.container>.sec-1 a:hover {
+    background-color: blueviolet;
+    border-color: transparent;
+}
+
+.container>.sec-2 a:hover {
+    background-color: black;
+    border-color: transparent;
+}

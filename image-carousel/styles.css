@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightcyan;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.buttons {
+  display: flex;
+}
+
+button {
+  flex: 1;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition-duration: 0.3s;
+  outline: none;
+}
+
+button:first-child {
+  border-right: 1px white solid;
+}
+button:last-child {
+  border-left: 1px white solid;
+}
+
+button:hover {
+  background-color: rgb(8, 196, 196);
+}
+
+.image {
+  overflow: hidden;
+  display: flex;
+}

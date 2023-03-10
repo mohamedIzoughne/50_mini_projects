@@ -1,0 +1,172 @@
+/* Global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.15;
+}
+
+.container {
+    color: initial;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 780px) {
+    .container {
+        padding-top: 100px;
+    }
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+    background-color: rgb(97, 97, 97);
+    color: white;
+}
+
+.container1 {
+    background-color: white;
+    width: 110vw;
+    height: 126vh;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
+
+.navigation {
+    width: 400px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 50px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.navigation li {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition-delay: .1s;
+    transition-duration: .3s;
+}
+
+.navigation li:nth-child(2) {
+    padding-left: 10px;
+}
+
+.navigation li:nth-child(3) {
+    padding-left: 20px;
+}
+
+
+.navigation.active li {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.navigation i {
+    width: 50px;
+    text-align: center;
+}
+
+.container1.rotated {
+    transform: rotate(-22deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    margin-top: -210px;
+    margin-left: 107px;
+    position: relative;
+    z-index: 3;
+}
+
+.nav-icon {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition-duration: .5s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.nav-icon i {
+    font-size: 1.8rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.nav-icon i.hamburger {
+    right: 49px;
+    bottom: 49px;
+}
+
+.nav-icon i.close {
+    left: 49px;
+    top: 45px;
+}
+
+.nav-icon.rotated {
+    transform: translate(-50%, -50%) rotate(-185deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-185deg);
+    -moz-transform: translate(-50%, -50%) rotate(-185deg);
+    -ms-transform: translate(-50%, -50%) rotate(-185deg);
+    -o-transform: translate(-50%, -50%) rotate(-185deg);
+}
+
+.image {
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

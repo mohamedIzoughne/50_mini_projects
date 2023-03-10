@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkcyan;
+}
+
+button {
+    width: 60px;
+    height: 34px;
+    background: rgb(175, 173, 173);
+    border: none;
+    border-radius: 9999px;
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    -ms-border-radius: 9999px;
+    -o-border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+button span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition-duration: .3s;
+}
+
+.checkboxes > div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+}
+
+button.active {
+    background: blueviolet;
+}
+
+button.active span {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+
+/* Loader Section */
+
+.wrapper-loader {
+    background: #2c3e50;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .3s;
+}
+
+.kinetic {
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+.kinetic::after,
+.kinetic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-bottom-color: #fff;
+    animation: rotateA 2s linear infinite .5s;
+    -webkit-animation: rotateA 2s linear infinite .5s;
+}
+
+.kinetic::before {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    animation: rotateB 2s linear infinite;
+    -webkit-animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+    0%, 25% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    50%, 75% {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+}   
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+
+@keyframes rotateB {
+    0%, 25% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+}
+    50%, 75% {
+        transform: rotate(270deg);
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+}   
+    100% {
+        transform: rotate(450deg);
+        -webkit-transform: rotate(450deg);
+        -moz-transform: rotate(450deg);
+        -ms-transform: rotate(450deg);
+        -o-transform: rotate(450deg);
+}
+}

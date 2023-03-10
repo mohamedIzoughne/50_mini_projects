@@ -1,0 +1,98 @@
+/* boiler plate */
+:root {
+    --bg-color: #4dabf5;
+    --first-color: #fff;
+    --secondary-color: #004f8d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--first-color);
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------- */
+.container {
+    width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: white 4px solid;
+}
+
+.big-cup {
+    width: 230px;
+    margin: 7px 0 8px 0px;
+    height: 410px;
+    border-radius: 0% 0% 80px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--secondary-color);
+    background-color: var(--first-color);
+    font-weight: bold;
+    border: 3px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.glasses {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    width: 70%;
+    cursor: pointer;
+}
+
+.glasses>div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.glass {
+    width: 38px;
+    background-color: white;
+    color: var(--secondary-color);
+    height: 57px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    border: 2px solid var(--secondary-color);
+}
+
+.glass.drunk {
+    background-color: var(--bg-color);
+    color: var(--first-color);
+    border-width: 1px;
+}
+
+.quantity-demanded {
+    margin-top: auto;
+}
+
+.quantity-figure {
+    width: 100%;
+    background-color: var(--bg-color);
+    margin-top: auto;
+    margin-bottom: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

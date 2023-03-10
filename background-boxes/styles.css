@@ -1,0 +1,114 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.magic {
+  background-color: #f9ca24;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 3px rgba(249, 202, 36, 0.5);
+  z-index: 100;
+}
+
+.magic:focus {
+  outline: none;
+}
+
+.magic:active {
+  box-shadow: none;
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+}
+
+.boxes {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+
+.boxes.big {
+  width: 600px;
+  height: 600px;
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+
+.box {
+  background-image: url('assets/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+}
+
+.box::after {
+  content: '';
+  background-color: #fae370;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  width: 15px;
+  height: 100%;
+  transform: skewY(45deg);
+  -webkit-transform: skewY(45deg);
+  -moz-transform: skewY(45deg);
+  -ms-transform: skewY(45deg);
+  -o-transform: skewY(45deg);
+}
+
+.box::before {
+  content: '';
+  background-color: #f9ca24;
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  width: 100%;
+  height: 15px;
+  transform: skewX(45deg);
+  -webkit-transform: skewX(45deg);
+  -moz-transform: skewX(45deg);
+  -ms-transform: skewX(45deg);
+  -o-transform: skewX(45deg);
+}

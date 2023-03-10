@@ -1,0 +1,87 @@
+/* boiler plate */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* -------- */
+.container {
+    width: 400px;
+    margin: 20px auto;
+}
+
+.container li {
+    border: 2px solid rgba(130, 130, 130, 0.576);
+    margin-bottom: 10px;
+    display: flex;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    overflow: hidden;
+}
+
+.container>h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+li h3 {
+    font-size: 1rem;
+}
+
+li p {
+    font-size: .8rem;
+    margin-top: 10px;
+    height: 0;
+    overflow: hidden;
+    transform-origin: top;
+}
+
+.container li .icon {
+    width: 40px;
+    height: 15px;
+    margin-left: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon i {
+    color: rgba(130, 130, 130, 0.576);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    transition-duration: .2s;
+}
+
+.container li.expand p {
+    height: fit-content;
+}
+
+li .icon i.close {
+    display: none;
+}
+
+li.expand .icon i.open {
+    display: none;
+}
+
+li.expand .icon i.close {
+    display: block;
+}
